@@ -65,17 +65,21 @@ color: coral;
 font-size: 32px;
 font-weight: bold;
 `
+const Image = styled.img `
+
+`
 
 
 const CheckItems = ({ cartItem }) => {
   const dispatch = useDispatch();
 
   const {id, img, price, quantity} = cartItem ;
+  
   return (
     <Container key={id}>
       <First>
         
-          <img src={img} />
+          <Image src={img} />
        
         
         <Desc>
@@ -97,6 +101,8 @@ const CheckItems = ({ cartItem }) => {
       
        
       </Third>
+
+      
     </Container>
   )
 }
