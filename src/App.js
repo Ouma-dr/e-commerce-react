@@ -2,7 +2,7 @@
 import './App.css';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
-import { BrowserRouter ,Routes, Route} from "react-router-dom";
+import { HashRouter ,Routes, Route} from "react-router-dom";
 import Nopage from './pages/Nopage';
 import About from './pages/About';
 
@@ -10,14 +10,14 @@ function App() {
   
   return (
     <div className="App">
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
          <Route path='/' exact element={<Home/>} />
-         <Route path='/cart'  element={<Cart/>} />
-         <Route path='/about'  element={<About/>} />
-         <Route path='/*'  element={<Nopage/>} />
+         <Route path='/cart' exact element={<Cart/>} />
+         <Route path='/about' exact element={<About/>} />
+         <Route path='/*' exact element={<Nopage/>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
       
     </div>
   );
